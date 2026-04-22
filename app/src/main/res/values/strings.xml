@@ -1,0 +1,192 @@
+<resources>
+    <string name="app_name">Easy Quote</string>
+
+    <string name="create_estimate">Create Estimate</string>
+    <string name="profile_settings">Settings</string>
+    <string name="company_profile">Company Profile</string>
+    <string name="header_section">Header</string>
+    <string name="estimate_title">Estimate Title</string>
+    <string name="quotation_number">Quotation Number</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select date</string>
+
+    <string name="customer_information">Customer Information</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="gst_number">GST Number</string>
+    <string name="state">State</string>
+
+    <string name="settings">Settings</string>
+    <string name="enable_tax">Apply GST</string>
+    <string name="round_off">Round Off (Optional)</string>
+    <string name="include_vat">Include VAT (Optional)</string>
+    <string name="enable_watermark">Enable Watermark</string>
+    <string name="watermark_text">Watermark Text</string>
+
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+
+    <string name="items">Items</string>
+    <string name="add_item">Add Item</string>
+    <string name="delete_item">Delete item</string>
+    <string name="item_name">Item Name</string>
+    <string name="hsn_sac">HSN/SAC</string>
+    <string name="qty">Qty</string>
+    <string name="unit_price">Price/Unit</string>
+    <string name="discount_percent">Discount %</string>
+    <string name="line_amount">Amount</string>
+
+    <string name="summary">Summary</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="discount_total">Discount Total</string>
+    <string name="tax_amount">Tax Amount</string>
+    <string name="vat_amount">VAT Amount</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="default_amount">INR 0.00</string>
+
+    <string name="template_selection">Template Selection</string>
+    <string name="template_modern_light">Modern Light</string>
+    <string name="template_minimal_grey">Minimal Grey</string>
+    <string name="template_elegant_blue">Elegant Blue</string>
+    <string name="template_business_classic">Business Classic</string>
+
+    <string name="live_preview">Live Preview</string>
+    <string name="preview_zoom_hint">Pinch to zoom and drag to move preview.</string>
+    <string name="preview_portrait">Portrait</string>
+    <string name="preview_landscape">Landscape</string>
+    <string name="reset_zoom">Reset Zoom</string>
+    <string name="actions">Actions</string>
+    <string name="save_pdf">Save PDF</string>
+    <string name="save_draft">Save Draft</string>
+    <string name="load_draft">Load Draft</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="share_pdf">Share PDF</string>
+    <string name="new_quote">New Quote</string>
+    <string name="save_profile">Save Profile</string>
+
+    <string name="draft_saved">Draft saved successfully.</string>
+    <string name="draft_save_failed">Unable to save draft.</string>
+    <string name="draft_loaded">Draft loaded.</string>
+    <string name="draft_not_found">No saved draft found.</string>
+    <string name="profile_saved">Profile settings saved.</string>
+    <string name="profile_save_failed">Unable to save profile settings.</string>
+    <string name="pdf_exported">Saved successfully</string>
+    <string name="pdf_export_failed">PDF export failed.</string>
+    <string name="share_estimate">Share Estimate PDF</string>
+    <string name="item_name_price_required">Add at least one item with item name and price.</string>
+    <string name="item_added">Item added.</string>
+    <string name="new_quote_created">New quote created.</string>
+
+    <string name="company_name">Company Name</string>
+    <string name="company_address">Company Address</string>
+    <string name="company_phone">Company Phone</string>
+    <string name="company_email">Company Email</string>
+    <string name="company_logo">Company Logo</string>
+    <string name="bank_details">Bank Details</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="ifsc">IFSC</string>
+    <string name="branch">Branch</string>
+    <string name="branding_options">Branding and Signature</string>
+    <string name="signature_name">Signature Name</string>
+    <string name="format_requirements">Format Requirements</string>
+    <string name="theme_mode">Theme Mode</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <string name="profile">Profile</string>
+    <string name="session">Session</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logged_in_as">Logged in as: %1$s</string>
+    <string name="full_name">Full Name</string>
+    <string name="social_links">Social Links</string>
+    <string name="telegram">Telegram</string>
+    <string name="instagram">Instagram</string>
+    <string name="profile_name_fallback">Your Profile</string>
+    <string name="profile_summary_no_social">%1$s</string>
+    <string name="profile_summary_one_social">%1$s • %2$s</string>
+    <string name="profile_summary_with_social">%1$s • %2$s • %3$s</string>
+
+    <string name="active_company_summary">Active: %1$s (%2$d companies)</string>
+    <string name="active_company">Active</string>
+    <string name="inactive_company">Inactive</string>
+    <string name="set_active">Set Active</string>
+    <string name="edit_company">Edit</string>
+    <string name="company_meta_fallback">No phone or email added</string>
+    <string name="company_details">Company Details</string>
+    <string name="set_active_company">Set this company as active</string>
+    <string name="save_company">Save Company</string>
+    <string name="company_saved">Saved successfully</string>
+    <string name="company_name_required">Company name is required.</string>
+
+    <string name="login_title">Welcome To Easy Quote</string>
+    <string name="login_subtitle">Sign in to continue. This demo login can be replaced with Firebase later.</string>
+    <string name="login_demo_note">Demo mode: use any username/password, for example demo1 / 1234.</string>
+    <string name="login_field_required">Please enter both username and password.</string>
+    <string name="logout_confirm">Do you want to logout now?</string>
+
+    <string name="demo_login">Demo Login</string>
+    <string name="demo_login_subtitle">Demo only: sign in with any username/password (examples: demo1, demo2, demo3). Firebase login can be added later.</string>
+    <string name="demo_login_success">Logged in (demo mode).</string>
+    <string name="demo_logged_in_as">Logged in as %1$s (demo)</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="logout">Logout</string>
+    <string name="login_required_message">Please sign in to edit settings.</string>
+
+    <string name="company_management">Company Management</string>
+    <string name="select_company">Select Company</string>
+    <string name="add_company">Add Company</string>
+    <string name="delete_company">Delete Company</string>
+    <string name="cannot_delete_last_company">At least one company is required.</string>
+    <string name="delete_company_confirm">Delete this company profile?</string>
+    <string name="delete_company_confirm_named">Delete %1$s company profile?</string>
+    <string name="company_auto_name">Company %1$d</string>
+    <string name="company_default_name">Company</string>
+
+    <string name="watermark_mode">Watermark Mode</string>
+    <string name="watermark_logo">Watermark Logo</string>
+    <string name="choose_logo">Choose Logo</string>
+    <string name="clear_logo">Clear Logo</string>
+    <string name="logo_formats_hint">Supported formats: PNG, JPG, JPEG, WEBP. (SVG is currently not supported for PDF generation).</string>
+    <string name="logo_format_not_supported">Please select a valid image file (PNG, JPG, or WEBP).</string>
+    <string name="watermark_type_text">Text</string>
+    <string name="watermark_type_logo">Logo</string>
+    <string name="watermark_opacity_label">Watermark Transparency: %1$d%%</string>
+
+    <string name="select_save_location">Select Save Location</string>
+    <string name="save_location_downloads">Downloads</string>
+    <string name="save_location_choose">Choose Location...</string>
+    <string name="save_location_cache">App Cache</string>
+    <string name="save_destination_title">Create PDF File</string>
+    <string name="share_saved_pdf_prompt">PDF saved successfully. Do you want to share it now?</string>
+
+    <string name="default_terms">1. Payment due within 15 days.
+2. Quotation is valid for 30 days.
+3. GST is applicable as per current regulations.</string>
+
+    <string name="authority_signature">Authority Signature (PNG/JPG)</string>
+    <string name="choose_signature">Choose Signature</string>
+    <string name="clear_signature">Clear Signature</string>
+    <string name="signature_formats_hint">Supported: PNG, JPG, WEBP. Transparent PNG is recommended for a clean look.</string>
+    <string name="add_above">Add Above</string>
+    <string name="add_below">Add Below</string>
+    <string name="unit">Unit</string>
+    <string name="unit_hint">Select unit</string>
+
+    <string name="unit_mtr">MTR</string>
+    <string name="unit_pcs">PCS</string>
+    <string name="unit_nos">NOS</string>
+    <string name="unit_box">BOX</string>
+    <string name="unit_kg">KG</string>
+    <string name="unit_gm">GM</string>
+    <string name="unit_ltr">LTR</string>
+    <string name="unit_set">SET</string>
+    <string name="unit_bag">BAG</string>
+    <string name="unit_sqft">SQFT</string>
+    <string name="unit_sqmt">SQMT</string>
+    <string name="unit_feet">FEET</string>
+    <string name="unit_inch">INCH</string>
+</resources>

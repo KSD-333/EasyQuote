@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface_background">#11151C</color>
+    <color name="card_surface">#1A212C</color>
+    <color name="input_surface">#202938</color>
+    <color name="card_stroke">#314155</color>
+    <color name="toolbar_background">#17212E</color>
+    <color name="toolbar_text">#E2EEFF</color>
+
+    <color name="text_primary">#E5EDF8</color>
+    <color name="text_secondary">#A9B8CC</color>
+
+    <color name="template_unselected_stroke">#3F4B5F</color>
+    <color name="template_modern_bg">#2B3F5B</color>
+    <color name="template_modern_text">#E5F0FF</color>
+    <color name="template_grey_bg">#373F4A</color>
+    <color name="template_grey_text">#E8EEF8</color>
+    <color name="template_blue_bg">#273C67</color>
+    <color name="template_blue_text">#E8F0FF</color>
+    <color name="template_classic_bg">#27453F</color>
+    <color name="template_classic_text">#E1F4EF</color>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#1D5EA8</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="primary_container">#D8E8FF</color>
+    <color name="on_primary_container">#0B2A4A</color>
+
+    <color name="surface_background">#EFF4FA</color>
+    <color name="card_surface">#FFFFFFFF</color>
+    <color name="input_surface">#F7F9FC</color>
+    <color name="card_stroke">#D7E1EE</color>
+    <color name="toolbar_background">#F6FAFF</color>
+    <color name="toolbar_text">#163A61</color>
+
+    <color name="text_primary">#1E2D40</color>
+    <color name="text_secondary">#677A93</color>
+    <color name="text_muted">#9AA8BC</color>
+    <color name="accent">#1D5EA8</color>
+    <color name="accent_muted">#201D5EA8</color>
+    <color name="divider">#D7E1EE</color>
+    <color name="error_red">#B73333</color>
+
+    <color name="template_selected_stroke">#1D5EA8</color>
+    <color name="template_unselected_stroke">#CCD8E7</color>
+
+    <color name="template_modern_bg">#DCEBFF</color>
+    <color name="template_modern_text">#154A89</color>
+
+    <color name="template_grey_bg">#ECEFF3</color>
+    <color name="template_grey_text">#404A57</color>
+
+    <color name="template_blue_bg">#DDE8FF</color>
+    <color name="template_blue_text">#194991</color>
+
+    <color name="template_classic_bg">#E3F0EC</color>
+    <color name="template_classic_text">#236D62</color>
+</resources>
