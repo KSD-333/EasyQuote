@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -200,6 +201,9 @@ public class CompanyDetailsActivity extends AppCompatActivity {
         tilWatermarkText = findViewById(R.id.tilWatermarkText);
         tilWatermarkLogo = findViewById(R.id.tilWatermarkLogo);
         etWatermarkText = findViewById(R.id.etWatermarkText);
+        etWatermarkText.setFilters(new InputFilter[]{
+            new InputFilter.LengthFilter(CompanyProfile.WATERMARK_TEXT_MAX_LENGTH)
+        });
         etWatermarkLogoUri = findViewById(R.id.etWatermarkLogoUri);
         sliderWatermarkOpacity = findViewById(R.id.sliderWatermarkOpacity);
         tvWatermarkOpacity = findViewById(R.id.tvWatermarkOpacity);

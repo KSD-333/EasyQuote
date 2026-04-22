@@ -463,12 +463,15 @@
                         android:layout_marginTop="8dp"
                         android:hint="@string/watermark_text"
                         app:boxBackgroundColor="@color/input_surface"
-                        app:boxBackgroundMode="outline">
+                        app:boxBackgroundMode="outline"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="24">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etWatermarkText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:maxLength="24"
                             android:singleLine="true" />
                     </com.google.android.material.textfield.TextInputLayout>
 

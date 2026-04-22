@@ -12,6 +12,7 @@ public class CompanyProfile {
     public static final String THEME_DARK = "DARK";
     public static final String WATERMARK_MODE_TEXT = "TEXT";
     public static final String WATERMARK_MODE_LOGO = "LOGO";
+    public static final int WATERMARK_TEXT_MAX_LENGTH = 24;
 
     private String companyId;
 
@@ -269,7 +270,16 @@ public class CompanyProfile {
     }
 
     public void setWatermarkText(String watermarkText) {
-        this.watermarkText = watermarkText;
+        if (watermarkText == null) {
+            this.watermarkText = "";
+            return;
+        }
+
+        String normalized = watermarkText.trim().replaceAll("\\s+", " ");
+        if (normalized.length() > WATERMARK_TEXT_MAX_LENGTH) {
+            normalized = normalized.substring(0, WATERMARK_TEXT_MAX_LENGTH);
+        }
+        this.watermarkText = normalized;
     }
 
     public String getWatermarkMode() {

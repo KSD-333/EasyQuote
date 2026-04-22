@@ -690,32 +690,38 @@ public final class QuoteRenderEngine {
         if (TextUtils.isEmpty(watermark)) {
             watermark = profile.getWatermarkText();
         }
+        watermark = normalizeWatermarkText(watermark);
         if (TextUtils.isEmpty(watermark)) {
             return;
         }
+        if (watermark.length() > CompanyProfile.WATERMARK_TEXT_MAX_LENGTH) {
+            watermark = watermark.substring(0, CompanyProfile.WATERMARK_TEXT_MAX_LENGTH);
+        }
 
-        // Professional Text Watermark: Large, Angled, Faint
         Paint watermarkPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         watermarkPaint.setColor(style.accent);
         watermarkPaint.setAlpha((int) (alphaPercent * 2.55f));
-
-        // Dynamic text size based on length to keep it impactful
-        float textSize = 110f;
-        if (watermark.length() > 10)
-            textSize = 80f;
-        if (watermark.length() > 20)
-            textSize = 60f;
-
+        float textSize = watermark.length() <= 10 ? 96f : (watermark.length() <= 16 ? 78f : 62f);
         watermarkPaint.setTextSize(textSize);
         watermarkPaint.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
 
-        canvas.save();
-        // Standard professional watermark angle
-        canvas.rotate(-45f, pageWidth / 2f, pageHeight / 2f);
+        float maxWatermarkWidth = Math.min(pageWidth, pageHeight) * 0.82f;
+        float measuredWidth = watermarkPaint.measureText(watermark);
+        if (measuredWidth > maxWatermarkWidth) {
+            float scaledSize = textSize * (maxWatermarkWidth / measuredWidth);
+            watermarkPaint.setTextSize(Math.max(28f, scaledSize));
+        }
 
-        float width = watermarkPaint.measureText(watermark);
-        // Center the text
-        canvas.drawText(watermark, (pageWidth - width) / 2f, pageHeight / 2f, watermarkPaint);
+        watermark = ellipsize(watermarkPaint, watermark, maxWatermarkWidth);
+        float finalWidth = watermarkPaint.measureText(watermark);
+
+        float centerX = pageWidth / 2f;
+        float centerY = pageHeight / 2f;
+        float baselineY = centerY - ((watermarkPaint.descent() + watermarkPaint.ascent()) / 2f);
+
+        canvas.save();
+        canvas.rotate(-45f, centerX, centerY);
+        canvas.drawText(watermark, centerX - (finalWidth / 2f), baselineY, watermarkPaint);
         canvas.restore();
     }
 
@@ -767,6 +773,13 @@ public final class QuoteRenderEngine {
             return fallback;
         }
         return value;
+    }
+
+    private static String normalizeWatermarkText(String value) {
+        if (TextUtils.isEmpty(value)) {
+            return "";
+        }
+        return value.trim().replaceAll("\\s+", " ");
     }
 
     private static String ellipsize(Paint paint, String text, float maxWidth) {

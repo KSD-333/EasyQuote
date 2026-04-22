@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
@@ -179,7 +180,7 @@ public class QuoteItemAdapter extends RecyclerView.Adapter<QuoteItemAdapter.Item
                     String unit = o.optString("unit", "");
                     double price = o.optDouble("unitPrice", 0d);
                     etHsn.setText(hsn);
-                    actvUnit.setText(unit);
+                    setAutoCompleteTextSafely(actvUnit, unit);
                     etPrice.setText(price == 0d ? "" : String.format(java.util.Locale.getDefault(), "%.2f", price));
                 } catch (Exception ignored) {}
             });
@@ -199,6 +200,15 @@ public class QuoteItemAdapter extends RecyclerView.Adapter<QuoteItemAdapter.Item
                 UNIT_OPTIONS
             );
             actvUnit.setAdapter(adapter);
+
+            // Always show all unit choices even after auto-fill (do not keep it filtered to one value).
+            actvUnit.setOnClickListener(v -> showAllUnitOptions());
+            actvUnit.setOnFocusChangeListener((v, hasFocus) -> {
+                if (hasFocus) {
+                    showAllUnitOptions();
+                }
+            });
+
             actvUnit.setOnItemClickListener((parent, view, position, id) -> {
                 Item item = currentItem();
                 if (item != null) {
@@ -208,6 +218,13 @@ public class QuoteItemAdapter extends RecyclerView.Adapter<QuoteItemAdapter.Item
             });
         }
 
+        private void showAllUnitOptions() {
+            if (actvUnit.getAdapter() instanceof Filterable) {
+                ((Filterable) actvUnit.getAdapter()).getFilter().filter("");
+            }
+            actvUnit.post(actvUnit::showDropDown);
+        }
+
         void bind(Item item, int displayIndex) {
             binding = true;
 
@@ -215,7 +232,7 @@ public class QuoteItemAdapter extends RecyclerView.Adapter<QuoteItemAdapter.Item
             refreshItemNameSuggestions();
             setTextSafely(etItemName, item.getItemName());
             setTextSafely(etHsn, item.getHsnSacCode());
-            setTextSafely(actvUnit, item.getUnit());
+            setAutoCompleteTextSafely(actvUnit, item.getUnit());
             setTextSafely(etQty, numberText(item.getQuantity(), true));
             setTextSafely(etPrice, numberText(item.getUnitPrice(), false));
 
@@ -371,6 +388,14 @@ public class QuoteItemAdapter extends RecyclerView.Adapter<QuoteItemAdapter.Item
         String next = value == null ? "" : value;
         if (!current.equals(next)) {
             textView.setText(next);
+        }
+    }
+
+    private static void setAutoCompleteTextSafely(AutoCompleteTextView textView, String value) {
+        String current = textView.getText() == null ? "" : textView.getText().toString().trim();
+        String next = value == null ? "" : value;
+        if (!current.equals(next)) {
+            textView.setText(next, false);
         }
     }
 }
